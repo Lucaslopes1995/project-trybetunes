@@ -94,6 +94,7 @@ class Search extends React.Component {
                 {album.collectionName}
               </Link>
               <p>{album.artistName}</p>
+              <img alt={ album.collectionId } src={ album.artworkUrl100 } />
             </div>
           ))}
           {!notFoundArtist && <p>Nenhum álbum foi encontrado</p>}
