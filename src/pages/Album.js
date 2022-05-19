@@ -22,6 +22,7 @@ class Album extends React.Component {
 
   render() {
     const { musics, getRespAPI, favSongs } = this.state;
+    const { location } = this.props;
     const validamusic = musics.length !== 0;
     // console.log(getRespAPI);
 
@@ -38,6 +39,8 @@ class Album extends React.Component {
               music={ music }
               mussicFav={ (favSongs
                 .find((s) => s.trackId === music.trackId) !== undefined) }
+              ajustFav={ console.log('aw') }
+              location={ location }
             />
           </div>
 
@@ -50,6 +53,7 @@ class Album extends React.Component {
 
 Album.propTypes = {
   match: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
 };
 
 export default Album;

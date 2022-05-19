@@ -8,6 +8,7 @@ class Profile extends React.Component {
   constructor() {
     super();
     this.state = { user: {}, getRespAPI: false };
+    this.userData = this.userData.bind(this);
   }
 
   async componentDidMount() {
@@ -15,6 +16,11 @@ class Profile extends React.Component {
     const user = await getUser();
     this.setState({ user, getRespAPI: false });
     console.log(user);
+  }
+
+  async userData() {
+    const user = await getUser();
+    return user;
   }
 
   render() {

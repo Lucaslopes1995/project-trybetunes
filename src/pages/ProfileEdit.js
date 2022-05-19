@@ -23,7 +23,29 @@ class ProfileEdit extends React.Component {
     const user = await getUser();
     const { name, email, image, description } = user;
     this.setState({ name, email, image, description, getRespAPI: false });
+
+    this.setState((state) => {
+      const nome = state.name;
+      const { email: em, image: im, description: des } = state;
+      const validButton = (nome === '')
+      || (em === '')
+      || (im === '')
+      || (des === '')
+      || !em.includes('@');
+      return { shouldButtonDisable: validButton };
+    });
+
     console.log(user);
+  }
+
+  componentWillUnmount() {
+    this.setState({ name: '',
+      email: '',
+      image: '',
+      description: '',
+      getRespAPI: false,
+      shouldButtonDisable: true,
+      shouldRedirect: false });
   }
 
   handleChange({ target }) {
@@ -54,7 +76,7 @@ class ProfileEdit extends React.Component {
 
   async handleSubmit() {
     const { name, email, image, description } = this.state;
-    this.setState({ awaitResAPI: true, shouldRedirect: true });
+    this.setState({ awaitResAPI: true });
     const ajustaUser = await updateUser({ name, email, image, description });
     if (ajustaUser === 'OK') {
       this.setState({ awaitResAPI: false, shouldRedirect: true });
