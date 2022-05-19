@@ -7,21 +7,11 @@ class MusicCard extends React.Component {
   constructor() {
     super();
     this.state = { mussicFav: false, getRespAPI: false };
-    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
     const { mussicFav } = this.props;
     this.setState({ mussicFav });
-  }
-
-  async handleChange() {
-    const { music: { trackId } } = this.props;
-    // console.log(target.name,target.checked)
-    // this.setState({[target.name]:target.checked})
-    const favSong = await addSong(trackId);
-    console.log(favSong);
-    this.setState({ getRespAPI: favSong !== 'OK' });
   }
 
   async favNewSong() {
@@ -44,6 +34,7 @@ class MusicCard extends React.Component {
     const { music } = this.props;
     const { getRespAPI, mussicFav } = this.state;
     const { trackId, previewUrl, trackName } = music;
+
     // console.log(mussicFav)
     return (
       <>
