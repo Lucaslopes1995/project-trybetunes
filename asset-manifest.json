@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/github-pages/static/css/main.854f2631.chunk.css",
-    "main.js": "/github-pages/static/js/main.b3dfd47c.chunk.js",
-    "main.js.map": "/github-pages/static/js/main.b3dfd47c.chunk.js.map",
-    "runtime-main.js": "/github-pages/static/js/runtime-main.57584fee.js",
-    "runtime-main.js.map": "/github-pages/static/js/runtime-main.57584fee.js.map",
-    "static/js/2.be12956a.chunk.js": "/github-pages/static/js/2.be12956a.chunk.js",
-    "static/js/2.be12956a.chunk.js.map": "/github-pages/static/js/2.be12956a.chunk.js.map",
-    "index.html": "/github-pages/index.html",
-    "static/css/main.854f2631.chunk.css.map": "/github-pages/static/css/main.854f2631.chunk.css.map",
-    "static/js/2.be12956a.chunk.js.LICENSE.txt": "/github-pages/static/js/2.be12956a.chunk.js.LICENSE.txt",
-    "static/media/coracao-selecionado.df567401.png": "/github-pages/static/media/coracao-selecionado.df567401.png"
+    "main.css": "/static/css/main.854f2631.chunk.css",
+    "main.js": "/static/js/main.b3dfd47c.chunk.js",
+    "main.js.map": "/static/js/main.b3dfd47c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.89d2d065.js",
+    "runtime-main.js.map": "/static/js/runtime-main.89d2d065.js.map",
+    "static/js/2.be12956a.chunk.js": "/static/js/2.be12956a.chunk.js",
+    "static/js/2.be12956a.chunk.js.map": "/static/js/2.be12956a.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.854f2631.chunk.css.map": "/static/css/main.854f2631.chunk.css.map",
+    "static/js/2.be12956a.chunk.js.LICENSE.txt": "/static/js/2.be12956a.chunk.js.LICENSE.txt",
+    "static/media/coracao-selecionado.df567401.png": "/static/media/coracao-selecionado.df567401.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.57584fee.js",
+    "static/js/runtime-main.89d2d065.js",
     "static/js/2.be12956a.chunk.js",
     "static/css/main.854f2631.chunk.css",
     "static/js/main.b3dfd47c.chunk.js"
