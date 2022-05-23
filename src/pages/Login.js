@@ -63,7 +63,7 @@ class Login extends React.Component {
           </button>
           <div className='carregando'>
           {carregando && <Carregando />}
-          {requisicaoFeita && <Redirect to="/search" />}
+          {requisicaoFeita && <Redirect to="/project-trybetunes/search" />}
 
           </div>
         </form>

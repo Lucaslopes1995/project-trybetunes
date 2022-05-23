@@ -17,13 +17,13 @@ class App extends React.Component {
   renderRouts() {
     return (
       <Switch>
-        <Route exact path="/" component={ Login } />
-        <Route path="/search" component={ Search } />
-        <Route path="/album/:id" component={ Album } />
-        <Route path="/favorites" component={ Favorites } />
-        <Route exact path="/profile" component={ Profile } />
-        <Route path="/profile/edit" component={ ProfileEdit } />
-        <Route path="*" component={ NotFound } />
+        <Route exact path="/project-trybetunes" component={ Login } />
+        <Route exact path="/project-trybetunes/search" component={ Search } />
+        <Route exact path="/project-trybetunes/album/:id" component={ Album } />
+        <Route exact path="/project-trybetunes/favorites" component={ Favorites } />
+        <Route exact path="/project-trybetunes/profile" component={ Profile } />
+        <Route exact path="/project-trybetunes/profile/edit" component={ ProfileEdit } />
+        <Route exact path="/project-trybetunes/*" component={ NotFound } />
       </Switch>
     );
   }

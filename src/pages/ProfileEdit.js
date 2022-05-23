@@ -167,7 +167,7 @@ class ProfileEdit extends React.Component {
             </button>
 
           </form>
-          {shouldRedirect && <Redirect to="/profile" />}
+          {shouldRedirect && <Redirect to="/project-trybetunes/profile" />}
         </div>
       </div>
     );

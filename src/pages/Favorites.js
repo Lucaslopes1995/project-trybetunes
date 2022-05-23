@@ -49,12 +49,11 @@ class Favorites extends React.Component {
             <hr />
           </div>
           <div>
-            {favSongs.map((song) => (
-              <div id="div-fav-music">
-                {console.log(song)}
+            {favSongs.map((song,i) => (
+              <div id="div-fav-music" key={ song.trackId+i}>
                 <img src={ song.artworkUrl100 } id="img-fav-music" />
                 <MusicCard
-                  key={ song.trackId }
+                  
                   music={ song }
                   mussicFav
                   ajustFav={ this.ajustFav }

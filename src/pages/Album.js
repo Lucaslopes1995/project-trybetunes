@@ -27,7 +27,7 @@ class Album extends React.Component {
     const validamusic = musics.length !== 0;
     // console.log(getRespAPI);
 
-    console.log(musics[0]);
+    // console.log(musics[0]);
     return (
       <div id="page-album" data-testid="page-album">
 

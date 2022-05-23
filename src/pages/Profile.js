@@ -31,7 +31,6 @@ class Profile extends React.Component {
   }
 
   validImage(){
-    console.log('opa')
     this.setState({adaptedImage:true})
   }
 
@@ -70,7 +69,7 @@ class Profile extends React.Component {
             <p>{description}</p>
             </div>
           </div>
-          <Link to="/profile/edit">Editar perfil</Link>
+          <Link to="/project-trybetunes/profile/edit">Editar perfil</Link>
         </div>
       </div>
     );

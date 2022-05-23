@@ -95,8 +95,8 @@ class Search extends React.Component {
                 {':'}
               </p>)}
             <div id="found-musics">
-              {requisicaoFeita && albuns.map((album) => (
-                <div key={ album.artistId + album.releaseDate + album.trackCount } id="div-img-text">
+              {requisicaoFeita && albuns.map((album,i) => (
+                <div key={ album.artistId + album.releaseDate + album.trackCount + i} id="div-img-text">
                   <div id="div-img">
                     <img alt={ album.collectionId } src={ album.artworkUrl100 } onClick={()=>history.push(`album/${album.collectionId}`)}/>
                   </div>

@@ -25,15 +25,14 @@ class Header extends React.Component {
   clickMenu({ target }) {
     const { history } = this.state;
     const { id, className } = target;
-    console.log(className);
     if (className === 'logo-perfil' || id === 'profile') {
-      history.push('/profile');
+      history.push('/project-trybetunes/profile');
     }
     if (id === 'logo-header' || id === 'search') {
-      history.push('/search');
+      history.push('/project-trybetunes/search');
     }
     if (id === 'favorites') {
-      history.push('/favorites');
+      history.push('/project-trybetunes/favorites');
     }
   }
 
@@ -61,16 +60,16 @@ class Header extends React.Component {
         <div id="header-todos-links">
 
           <div id="search" className="div-link-header" onClick={ this.clickMenu }>
-            <Link data-testid="link-to-search" to="/search"> Search </Link>
+            <Link data-testid="link-to-search" to="/project-trybetunes/search"> Search </Link>
           </div>
           <div id="favorites" className="div-link-header" onClick={ this.clickMenu }>
 
-            <Link data-testid="link-to-favorites" to="/favorites"> Favorites </Link>
+            <Link data-testid="link-to-favorites" to="/project-trybetunes/favorites"> Favorites </Link>
           </div>
 
           <div id="profile" className="div-link-header" onClick={ this.clickMenu }>
 
-            <Link data-testid="link-to-profile" to="/profile"> Profile </Link>
+            <Link data-testid="link-to-profile" to="/project-trybetunes/profile"> Profile </Link>
           </div>
 
         </div>
