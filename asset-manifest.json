@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/project-trybetunes/static/css/main.bbde32a5.chunk.css",
+    "main.css": "/project-trybetunes/static/css/main.0040b1f0.chunk.css",
     "main.js": "/project-trybetunes/static/js/main.657cc2ed.chunk.js",
     "main.js.map": "/project-trybetunes/static/js/main.657cc2ed.chunk.js.map",
     "runtime-main.js": "/project-trybetunes/static/js/runtime-main.9d9abc3a.js",
@@ -8,14 +8,14 @@
     "static/js/2.be12956a.chunk.js": "/project-trybetunes/static/js/2.be12956a.chunk.js",
     "static/js/2.be12956a.chunk.js.map": "/project-trybetunes/static/js/2.be12956a.chunk.js.map",
     "index.html": "/project-trybetunes/index.html",
-    "static/css/main.bbde32a5.chunk.css.map": "/project-trybetunes/static/css/main.bbde32a5.chunk.css.map",
+    "static/css/main.0040b1f0.chunk.css.map": "/project-trybetunes/static/css/main.0040b1f0.chunk.css.map",
     "static/js/2.be12956a.chunk.js.LICENSE.txt": "/project-trybetunes/static/js/2.be12956a.chunk.js.LICENSE.txt",
     "static/media/coracao-selecionado.df567401.png": "/project-trybetunes/static/media/coracao-selecionado.df567401.png"
   },
   "entrypoints": [
     "static/js/runtime-main.9d9abc3a.js",
     "static/js/2.be12956a.chunk.js",
-    "static/css/main.bbde32a5.chunk.css",
+    "static/css/main.0040b1f0.chunk.css",
     "static/js/main.657cc2ed.chunk.js"
   ]
 }
