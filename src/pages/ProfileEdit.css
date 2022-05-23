@@ -117,3 +117,12 @@ p {
   height: 20px;
   width: 150px;
 }
+
+@media screen and (max-width: 600px) {
+  #editar-button{
+
+    align-self: center;
+    margin: 20px 0px 50px !important;
+  }
+
+}

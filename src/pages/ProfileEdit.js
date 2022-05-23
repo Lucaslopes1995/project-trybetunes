@@ -161,7 +161,7 @@ class ProfileEdit extends React.Component {
               type="submit"
               data-testid="edit-button-save"
               disabled={ shouldButtonDisable }
-
+              id='editar-button'
             >
               Editar
             </button>
