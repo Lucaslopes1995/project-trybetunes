@@ -116,3 +116,50 @@
 #result-found-musics :first-child {
   margin-bottom: 50px;
 }
+
+@media screen and (max-width: 600px) {
+  #input-button-form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px auto;
+  }
+
+  #input-button-form input{
+    font-size: 20px;
+    gap: 10px;
+    height: 45px;
+    margin: 20px;
+    padding: 2px px;
+    top: 277px;
+    width: 250px;
+  }
+
+  .found-results{
+    display: flex;
+    justify-content: center;
+  }
+
+  #div-img-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px black solid;
+    padding: 5px;
+    margin: 10px 0 10px 0;
+  }
+
+  #result-found-musics :first-child{
+    margin-bottom: 20px;
+  }
+
+  #div-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50px;
+
+  }
+}

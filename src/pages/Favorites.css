@@ -25,3 +25,15 @@
   width: 80px;
   height: 30px;
 }
+
+@media screen and (max-width: 600px) {
+  #div-fav-music{
+    flex-direction: column;
+    justify-content: space-around;
+    height: 500px;
+    border: 1px black solid;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+}

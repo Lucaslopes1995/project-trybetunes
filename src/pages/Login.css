@@ -75,3 +75,13 @@
 #page-login button:disabled{
   background: #ccc;
 }
+
+
+
+@media screen and (max-width: 600px) {
+  #page-login form {
+
+    height: 200px;
+    width: 400px;
+  }
+}

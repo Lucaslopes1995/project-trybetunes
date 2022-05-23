@@ -88,7 +88,7 @@ class Search extends React.Component {
 
           <div id="result-found-musics">
             {requisicaoFeita && (
-              <p>
+              <p className='found-results'>
                 Resultado de álbuns de
                 {' '}
                 {artista}
