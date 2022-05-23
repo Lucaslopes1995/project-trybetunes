@@ -1,7 +1,6 @@
 {
   "name": "trybetunes",
   "version": "0.1.0",
-  "homepage": "github-pages/",
   "private": true,
   "engines": {
     "node": "16"
