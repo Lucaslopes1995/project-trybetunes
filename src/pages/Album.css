@@ -67,6 +67,7 @@
 @media screen and (max-width: 600px) {
   #body-page-album {
     flex-direction: column;
+    align-items: center;
   }
 
   #div-musics {
