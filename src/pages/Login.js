@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import Carregando from '../components/Carregando';
 import { createUser } from '../services/userAPI';
+import './Login.css';
 
 class Login extends React.Component {
   constructor() {
@@ -27,7 +28,8 @@ class Login extends React.Component {
     });
   }
 
-  async submitbutton(name) {
+  async submitbutton(e,name) {
+    e.preventDefault();
     this.setState({ carregando: true });
     const esperaCriacaoUsuario = await createUser({ name });
 
@@ -39,12 +41,13 @@ class Login extends React.Component {
   render() {
     const { name, shouldDisableButton, carregando, requisicaoFeita } = this.state;
     return (
-      <div data-testid="page-login">
-        <form>
+      <div id="page-login" data-testid="page-login">
+        <div className='page-login-div'/>
+        <form  onSubmit={ (e) => this.submitbutton(e,name) }>
           <label htmlFor="login-name-input">
-            Nome
             <input
               name="name"
+              placeholder="Nome"
               value={ name }
               id="login-name-input"
               data-testid="login-name-input"
@@ -52,15 +55,17 @@ class Login extends React.Component {
             />
           </label>
           <button
-            type="button"
+            type="submit"
             data-testid="login-submit-button"
             disabled={ shouldDisableButton }
-            onClick={ () => this.submitbutton(name) }
           >
             Entrar
           </button>
+          <div className='carregando'>
           {carregando && <Carregando />}
           {requisicaoFeita && <Redirect to="/search" />}
+
+          </div>
         </form>
       </div>
 

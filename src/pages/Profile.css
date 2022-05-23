@@ -1,0 +1,58 @@
+#body-profile-page {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+}
+
+#body-profile-page a {
+  align-items: center;
+  border: 1px black solid;
+  border-radius: 7px;
+
+  /* royal blue 500 */
+  color: #003be5;
+
+  /* or 18px */
+  display: flex;
+
+
+  /* Inside auto layout */
+  flex: none;
+  flex-grow: 0;
+  font-family: 'Verdana';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 18px;
+  letter-spacing: 0.03em;
+  line-height: 132%;
+  order: 0;
+  padding-left: 8px;
+  text-align: center;
+  text-decoration: none;
+  width: 87px;
+}
+
+#div-text-imag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 100px;
+  width: 100px;
+}
+
+.div-awaitingAPI{
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.div-awaitingAPI img{
+  width: 100%;
+  
+}
+
+.div-awaitingAPI-text{
+  width: 100px;
+  height: 30px;
+}

@@ -1,0 +1,27 @@
+#div-body-favorites {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+#div-fav-music {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+#img-fav-music {
+  border-radius: 50%;
+  height: 61px;
+  left: 274px;
+  padding: 20px;
+  top: 394px;
+  width: 61px;
+}
+
+#div-carregando{
+  width: 80px;
+  height: 30px;
+}

@@ -1,0 +1,77 @@
+#page-login {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.page-login-div {
+  background-image: url('../images/LOGO_POSITIVA\ 1.png');
+  height: 158px;
+  width: 208px;
+}
+
+#page-login form {
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  height: 314px;
+  justify-content: center;
+  margin: 10px;
+  width: 697px;
+}
+
+#page-login form label {
+  margin: 0;
+  padding: 0;
+}
+
+#page-login form input {
+  align-items: flex-start;
+
+
+  /* white */
+  background: #fff;
+
+  /* gray 300 */
+  border: 1px solid #e1e5eb;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  height: 10px;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  width: 300px;
+}
+
+#page-login form button {
+  align-items: center;
+
+
+
+  /* royal blue 500 */
+  background: #003be5;
+  border-radius: 2px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Verdana';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  gap: 10px;
+  height: 20px;
+  justify-content: center;
+  line-height: 150%;
+  padding: 12px 16px;
+  width: 334.49px;
+}
+
+#page-login button:disabled{
+  background: #ccc;
+}

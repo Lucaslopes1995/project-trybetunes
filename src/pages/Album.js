@@ -5,6 +5,7 @@ import getMusics from '../services/musicsAPI';
 import Carregando from '../components/Carregando';
 import MusicCard from '../components/MusicCard';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
+import './Album.css';
 
 class Album extends React.Component {
   constructor() {
@@ -22,38 +23,50 @@ class Album extends React.Component {
 
   render() {
     const { musics, getRespAPI, favSongs } = this.state;
-    const { location } = this.props;
+    const { location, history } = this.props;
     const validamusic = musics.length !== 0;
     // console.log(getRespAPI);
 
-    // console.log(musics);
+    console.log(musics[0]);
     return (
-      <div data-testid="page-album">
+      <div id="page-album" data-testid="page-album">
 
-        <Header />
-        {(validamusic) && <p data-testid="artist-name">{musics[0].artistName}</p>}
-        {validamusic && <p data-testid="album-name">{musics[0].collectionName}</p> }
-        {musics.filter((el, i) => i !== 0).map((music) => (
-          <div key={ music.trackId + music.artistId }>
-            <MusicCard
-              music={ music }
-              mussicFav={ (favSongs
-                .find((s) => s.trackId === music.trackId) !== undefined) }
-              ajustFav={ console.log('aw') }
-              location={ location }
-            />
+        <Header history={ history } />
+        <div id="body-page-album">
+          {(validamusic) && (
+            <div id="div-album">
+              <img id="album-image" data-testid="album-image" src={ musics[0].artworkUrl100 } />
+              <div id="div-textos">
+                <h2 data-testid="artist-name">{musics[0].artistName}</h2>
+                <span data-testid="album-name">{musics[0].collectionName}</span>
+              </div>
+            </div>
+          )}
+          <div id="div-musics">
+
+            {musics.filter((el, i) => i !== 0).map((music) => (
+              <div id="div-music" key={ music.trackId + music.artistId }>
+                <MusicCard
+                  music={ music }
+                  mussicFav={ (favSongs
+                    .find((s) => s.trackId === music.trackId) !== undefined) }
+                  ajustFav={ () => {} }
+                  location={ location }
+                />
+              </div>
+
+            ))}
+            {getRespAPI && <Carregando />}
           </div>
-
-        ))}
-        {getRespAPI && <Carregando />}
+        </div>
       </div>
     );
   }
 }
 
 Album.propTypes = {
-  match: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
+  match: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
 };
 
 export default Album;

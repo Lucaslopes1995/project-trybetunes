@@ -1,0 +1,55 @@
+#track-name {
+  color: #001813;
+  font-family: 'Epilogue';
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  height: 33px;
+  left: 589px;
+  line-height: 23px;
+  top: 356px;
+  width: 110px;
+
+}
+
+audio {
+  background: #f0f2f5;
+  border-radius: 50px;
+}
+
+#track-lab-fav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+#track-lab-fav input {
+  display: none;
+}
+
+#track-lab-fav img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-color: #E5E5E5;
+
+  margin: 8px;
+}
+
+#track-lab-fav input:checked + img {
+  src: '../images/coracao.png';
+}
+
+
+#track-lab-fav img:hover {
+  cursor: pointer;
+}
+
+.div-carregando{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 150px;
+  height: 54px;
+}

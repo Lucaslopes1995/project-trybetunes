@@ -1,0 +1,23 @@
+#body-not-found {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#body-not-found h3 {
+  font-size: 50px;
+}
+
+#body-not-found h4 {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 15px;
+  font-weight: normal;
+  margin-left: 20px;
+  width: 100px;
+}
+
+#textos-not-found {
+  display: flex;
+}

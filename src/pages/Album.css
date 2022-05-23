@@ -1,0 +1,66 @@
+#body-page-album {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+
+#div-album {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+
+#div-album img {
+  border-radius: 6px;
+  height: 290px;
+  left: 179px;
+  top: 332px;
+  width: 290px;
+}
+
+#div-album h2 {
+  color: #023031;
+  font-family: 'Epilogue';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  height: 36px;
+  line-height: 37px;
+  text-align: center;
+  width: 330px;
+}
+
+#div-textos {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#span {
+  color: #023031;
+  font-family: 'Epilogue';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  height: 36px;
+  left: 184px;
+  line-height: 25px;
+  top: 714px;
+  width: 255px;
+}
+
+#div-musics {
+  display: flex;
+  flex-direction: column;
+}
+
+#div-music {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+

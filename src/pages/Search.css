@@ -1,0 +1,118 @@
+#body-search-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px auto;
+}
+
+
+#input-button-form {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+#input-button-form label {
+  margin: 12px auto;
+}
+
+#input-button-form input {
+  align-items: flex-start;
+
+  /* white */
+  background: #fff;
+  border: 1px solid #3d495c;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+
+  /* gray 700 */
+  font-size: 20px;
+  gap: 10px;
+  height: 45px;
+  left: 380px;
+  margin: 20px;
+  padding: 2px px;
+  top: 277px;
+  width: 519px;
+}
+
+#input-button-form button {
+  align-items: center;
+  background: #003be5;
+  border-radius: 2px;
+
+  /* identical to box height, or 24px */
+
+  /* white */
+  color: #fff;
+  display: flex;
+
+
+  /* Inside auto layout */
+  flex: none;
+  flex-direction: row;
+  flex-grow: 0;
+  font-family: 'Verdana';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  gap: 10px;
+  height: 45px;
+  justify-content: center;
+  line-height: 150%;
+  margin: 12px auto;
+  order: 0;
+  padding: 8px 32px;
+  width: 134px;
+}
+
+#input-button-form button:disabled {
+  background: #ccc;
+}
+
+#found-musics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+}
+
+#div-img-text {
+  border-radius: 6px;
+  height: 320px;
+  left: 112px;
+  padding: 0 0 16px;
+  top: 507px;
+  width: 290px;
+
+}
+
+#div-img img {
+  border-radius: 6px 6px 0 0;
+  mix-blend-mode: normal;
+  cursor: pointer;
+}
+
+#div-text {
+  border-radius: 6px;
+  height: 320px;
+  left: 112px;
+  padding: 0 0 16px;
+  top: 507px;
+  width: 290px;
+
+}
+
+#div-text a {
+  text-decoration: none;
+
+}
+
+#result-found-musics :first-child {
+  margin-bottom: 50px;
+}

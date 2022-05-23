@@ -3,6 +3,8 @@ import { Redirect } from 'react-router-dom';
 import Header from '../components/Header';
 import Carregando from '../components/Carregando';
 import { getUser, updateUser } from '../services/userAPI';
+import './ProfileEdit.css';
+import perfil from '../images/perfil.png';
 
 class ProfileEdit extends React.Component {
   constructor() {
@@ -19,7 +21,7 @@ class ProfileEdit extends React.Component {
   }
 
   async componentDidMount() {
-    this.setState({ getRespAPI: true });
+    this.setState({ getRespAPI: false });
     const user = await getUser();
     const { name, email, image, description } = user;
     this.setState({ name, email, image, description, getRespAPI: false });
@@ -35,7 +37,7 @@ class ProfileEdit extends React.Component {
       return { shouldButtonDisable: validButton };
     });
 
-    console.log(user);
+    // console.log(user);
   }
 
   componentWillUnmount() {
@@ -74,9 +76,10 @@ class ProfileEdit extends React.Component {
     // }
   }
 
-  async handleSubmit() {
+  async handleSubmit(e) {
+    e.preventDefault();
     const { name, email, image, description } = this.state;
-    this.setState({ awaitResAPI: true });
+    this.setState({ awaitResAPI: true, getRespAPI: true });
     const ajustaUser = await updateUser({ name, email, image, description });
     if (ajustaUser === 'OK') {
       this.setState({ awaitResAPI: false, shouldRedirect: true });
@@ -92,52 +95,80 @@ class ProfileEdit extends React.Component {
       shouldButtonDisable,
       awaitResAPI,
       shouldRedirect } = this.state;
+    const { history } = this.props;
     return (
       <div data-testid="page-profile-edit">
-        <Header />
-        {getRespAPI && <Carregando />}
-        <form>
-          <input
-            type="text"
-            name="name"
-            value={ name }
-            data-testid="edit-input-name"
-            onChange={ this.handleChange }
-          />
-          <input
-            type="email"
-            name="email"
-            value={ email }
-            data-testid="edit-input-email"
-            onChange={ this.handleChange }
-          />
-          <input
-            type="text"
-            name="description"
-            value={ description }
-            data-testid="edit-input-description"
-            onChange={ this.handleChange }
-          />
-          <input
-            type="text"
-            name="image"
-            value={ image }
-            data-testid="edit-input-image"
-            onChange={ this.handleChange }
-          />
+        <Header history={ history } />
+        <div className='carregando'>
 
-          <button
-            type="button"
-            data-testid="edit-button-save"
-            disabled={ shouldButtonDisable }
-            onClick={ this.handleSubmit }
-          >
-            Editar
-          </button>
+          {getRespAPI && <Carregando />}
+        </div>
+        <div id="todo-form">
+          <form id="form-edit-profile" onSubmit={ this.handleSubmit }>
+            <div id="div-img" className="div-inputs">
+              <img src={ perfil } alt="perfil" />
+              <input
+                type="text"
+                name="image"
+                value={ image }
+                data-testid="edit-input-image"
+                onChange={ this.handleChange }
+                placeholder="Inserir um Link"
+              />
 
-        </form>
-        {awaitResAPI && <Carregando />}
-        {shouldRedirect && <Redirect to="/profile" />}
+            </div>
+            <div id="div-nome" className="div-inputs">
+              <strong>Nome</strong>
+              <p>Fique à vontade para usar seu nome social</p>
+              <input
+                type="name"
+                name="name"
+                value={ name }
+                data-testid="edit-input-name"
+                onChange={ this.handleChange }
+              />
+
+            </div>
+
+            <div id="div-email" className="div-inputs">
+              <strong>E-mail</strong>
+              <p>Escolha um e-mail que consulte diariamente</p>
+              <input
+                type="email"
+                name="email"
+                value={ email }
+                data-testid="edit-input-email"
+                onChange={ this.handleChange }
+                placeholder="usuario@usuario.com.br"
+              />
+
+            </div>
+
+            <div id="div-description" className="div-inputs">
+              <strong>Descrição</strong>
+              <textarea
+                type="text"
+                name="description"
+                value={ description }
+                data-testid="edit-input-description"
+                onChange={ this.handleChange }
+                placeholder="Sobre mim"
+              />
+
+            </div>
+
+            <button
+              type="submit"
+              data-testid="edit-button-save"
+              disabled={ shouldButtonDisable }
+
+            >
+              Editar
+            </button>
+
+          </form>
+          {shouldRedirect && <Redirect to="/profile" />}
+        </div>
       </div>
     );
   }

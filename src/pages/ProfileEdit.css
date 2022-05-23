@@ -1,0 +1,119 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+
+#todo-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+}
+
+#form-edit-profile {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#div-nome {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+}
+
+#div-email {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+}
+
+#div-description {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+}
+
+#todo-form button {
+  align-items: center;
+  align-items: center;
+
+  /* royal blue 500 */
+  background: #003be5;
+  border-radius: 2px;
+
+  /* white */
+  color: #fff;
+  display: flex;
+
+  /* identical to box height, or 24px */
+  display: flex;
+
+  /* Inside auto layout */
+  flex: none;
+
+
+  /* Inside auto layout */
+  flex: none;
+  flex-direction: row;
+  flex-grow: 0;
+  flex-grow: 0;
+
+  /* text-base/Regular */
+  font-family: 'Verdana';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  gap: 10px;
+  height: 40px;
+  height: 24px;
+  justify-content: center;
+  line-height: 150%;
+  margin: 20px 0 0 60px ;
+  order: 0;
+  order: 0;
+  padding: 8px 32px;
+  text-align: center;
+  width: 115px;
+  width: 51px;
+  margin-bottom: 50px;
+}
+
+#todo-form button:valid {
+  cursor: pointer;
+
+}
+
+
+.div-inputs strong {
+  margin-top: 10px;
+}
+
+.div-inputs p {
+  margin-top: 5px;
+}
+
+.div-inputs input {
+  margin-top: 5px;
+}
+
+.div-inputs textarea {
+  margin-top: 5px;
+}
+
+#form-edit-profile button:disabled {
+  background: #ccc;
+}
+
+.carregando{
+  margin: 10px auto;
+  height: 20px;
+  width: 150px;
+}

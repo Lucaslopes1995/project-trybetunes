@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Carregando from '../components/Carregando';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import MusicCard from '../components/MusicCard';
+import './Favorites.css';
 
 class Favorites extends React.Component {
   constructor() {
@@ -32,29 +33,45 @@ class Favorites extends React.Component {
 
   render() {
     const { favSongs, getRespAPI } = this.state;
-    const { location } = this.props;
-    console.log(favSongs);
+    const { location, history } = this.props;
+    // console.log(favSongs);
 
     return (
       <div data-testid="page-favorites">
-        <Header />
-        {getRespAPI && <Carregando />}
-        {favSongs.map((song) => (
-          <MusicCard
-            key={ song.trackId }
-            music={ song }
-            mussicFav
-            ajustFav={ this.ajustFav }
-            location={ location }
-          />
-        ))}
+        <Header history={ history } />
+
+        <div id="div-body-favorites">
+          <div id="textos-inicio">
+            <div id='div-carregando'>
+              {getRespAPI && <Carregando />}
+            </div>
+            <p>Músicas Favoritas</p>
+            <hr />
+          </div>
+          <div>
+            {favSongs.map((song) => (
+              <div id="div-fav-music">
+                {console.log(song)}
+                <img src={ song.artworkUrl100 } id="img-fav-music" />
+                <MusicCard
+                  key={ song.trackId }
+                  music={ song }
+                  mussicFav
+                  ajustFav={ this.ajustFav }
+                  location={ location }
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     );
   }
 }
 
 Favorites.propTypes = {
-  location: PropTypes.string.isRequired,
+  location: PropTypes.object.isRequired,
 };
 
 export default Favorites;
