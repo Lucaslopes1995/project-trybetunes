@@ -59,7 +59,9 @@ class MusicCard extends React.Component {
           data-testid="audio-component"
           src={ previewUrl }
           controls
+          
         >
+          <button>Play &#9658;</button>
           <track kind="captions" />
         </audio>
         <label htmlFor={ trackId } id="track-lab-fav">
