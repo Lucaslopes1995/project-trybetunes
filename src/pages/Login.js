@@ -52,6 +52,7 @@ class Login extends React.Component {
               id="login-name-input"
               data-testid="login-name-input"
               onChange={ this.handleChange }
+              maxLength='10'
             />
           </label>
           <button

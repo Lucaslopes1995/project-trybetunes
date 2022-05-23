@@ -126,6 +126,7 @@ class ProfileEdit extends React.Component {
                 value={ name }
                 data-testid="edit-input-name"
                 onChange={ this.handleChange }
+                maxLength='10'
               />
 
             </div>
