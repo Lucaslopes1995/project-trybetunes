@@ -75,6 +75,7 @@ class Search extends React.Component {
                     id="search-artist-input"
                     data-testid="search-artist-input"
                     placeholder='Pesquise por um álbum'
+                    autoComplete='off'
                   />
                 </label>
                 <button

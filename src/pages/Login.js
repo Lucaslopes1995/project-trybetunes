@@ -53,6 +53,7 @@ class Login extends React.Component {
               data-testid="login-name-input"
               onChange={ this.handleChange }
               maxLength='15'
+              autoComplete='off'
             />
           </label>
           <div className='carregando'>

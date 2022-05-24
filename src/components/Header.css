@@ -109,6 +109,16 @@
 
 
 @media screen and (max-width: 600px) {
+  #div-superior{
+    display: flex;
+    flex-direction: column;
+    height: 170px;
+  }
+
+  #div-superior img{
+    margin-bottom: 15px;
+  }
+
   #header-todos-links {
 
     display: flex;
@@ -117,8 +127,18 @@
     height: 200px;
 
   }
-  #search{
-    
+
+  #div-usuario{
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #div-usuario img {
+    margin: 10px;
+
   }
 
 
