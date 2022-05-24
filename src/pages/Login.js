@@ -52,9 +52,14 @@ class Login extends React.Component {
               id="login-name-input"
               data-testid="login-name-input"
               onChange={ this.handleChange }
-              maxLength='10'
+              maxLength='15'
             />
           </label>
+          <div className='carregando'>
+          {carregando && <Carregando />}
+          {requisicaoFeita && <Redirect to="/project-trybetunes/search" />}
+
+          </div>
           <button
             type="submit"
             data-testid="login-submit-button"
@@ -62,11 +67,7 @@ class Login extends React.Component {
           >
             Entrar
           </button>
-          <div className='carregando'>
-          {carregando && <Carregando />}
-          {requisicaoFeita && <Redirect to="/project-trybetunes/search" />}
-
-          </div>
+          
         </form>
       </div>
 

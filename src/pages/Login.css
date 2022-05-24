@@ -80,8 +80,17 @@
 
 @media screen and (max-width: 600px) {
   #page-login form {
-
-    height: 200px;
-    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 180px;
+    width: 350px;
   }
+
+  #page-login form button{
+
+    height: 30px;
+    width: 150px;
+  }
+  
 }
